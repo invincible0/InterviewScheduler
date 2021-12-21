@@ -1,0 +1,49 @@
+<%- include('./partials/header') %>
+
+<main class="container mt-3">
+<%if(flash.success && flash.success.length){%>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <%= flash.success %> 
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+    </div>
+<%}%>
+<%if(flash.error && flash.error.length){%>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <%= flash.error %> 
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+    </div>
+<%}%>
+</main>
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Date</th>
+                <th scope="col">Start Time</th>
+                <th scope="col">End Time</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <%for(let i=0;i<interviews.length;i++){ %>
+                <tr>
+                    <th scope="row"><%=`${interviews[i].name}`%></th>
+                    <td><%=`${interviews[i].startTime.toDateString()}`%></td>
+                    <td><%=`${interviews[i].startTime.getHours()}:${interviews[i].startTime.getMinutes()}`%></td>
+                    <td><%=`${interviews[i].endTime.getHours()}:${interviews[i].endTime.getMinutes()}`%></td>
+                    <td><a href="<%=`/interview/edit/${interviews[i]._id}`%>" class="btn btn-warning" role="button" aria-pressed="true">Edit</a></td>
+                    <td><a href="<%=`/interview/view/${interviews[i]._id}`%>" class="btn btn-success" role="button" aria-pressed="true">View</a></td>
+                </tr>
+            <%}%>
+        </tbody>
+    </table>
+</div>
+
+<%- include('./partials/footer') %>
