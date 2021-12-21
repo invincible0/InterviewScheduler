@@ -11,21 +11,21 @@ Error messages are being displayed whenever required using connect-flash npm mod
 Following are some screenshots of the application:
 
 # Home Page
-<img src="screenshots/Screenshot (307).png">
+<img src="Screenshots/Screenshot (307).png">
 
 # Interview Creation Page
-<img src="screenshots/Screenshot (309).png">
+<img src="Screenshots/Screenshot (309).png">
 
 # Successful Interview Creation
-<img src="screenshots/Screenshot (310).png">
+<img src="Screenshots/Screenshot (310).png">
 
 # Interview View Page
-<img src="screenshots/Screenshot (311).png">
+<img src="Screenshots/Screenshot (311).png">
 
 # Interview Edit Page followed by Error prompt
-<img src="screenshots/Screenshot (312).png">
-<img src="screenshots/Screenshot (313).png">
+<img src="Screenshots/Screenshot (312).png">
+<img src="Screenshots/Screenshot (313).png">
 
 # Database (MongoDB)
-<img src="screenshots/Screenshot (314).png">
-<img src="screenshots/Screenshot (315).png">
+<img src="Screenshots/Screenshot (314).png">
+<img src="Screenshots/Screenshot (315).png">
